@@ -1,0 +1,25 @@
+{% extends 'padre.html' %}
+{% block contenidoQueCambia %}
+<!-- <ul>
+    {% for profesor in profesores %}
+    <li>{{ profesor }}</li>
+    {% endfor %}
+</ul> -->
+<form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+    <label for="nombre">Nombre</label>
+    <input type="text" name= "nombre" required>
+     </div>
+     <div class="mb-3">
+    <label for="apellido">Apellido</label>
+    <input type="text" name= "apellido" required>
+     </div>
+     <div class="mb-3">
+    <label for="email">Email</label>
+    <input type="email" name= "email" required>
+    </div>
+    <input type="submit" value="Enviar">
+</form>
+{% endblock contenidoQueCambia %}
+
